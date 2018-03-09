@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bienvenidos A Mi Web</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<script src="assets/js/jquery-1.11.0.min.js"></script>
+	</head>
+	<body class="is-loading">
+			<div id="wrapper">
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.png" alt="" /></span>
+							<h1>Victor Caceres</h1>
+							<p>Freelancer</p>
+						</header>
+						<footer>
+							<ul class="icons">
+								<li><a href="#" class="mostrar">RotPage</a></li>
+							</ul>
+						</footer>
+
+						<div id="flotante">
+						<h2>Elige el color que más te guste!</h2>
+						<ul class="demo-choose-skin">
+							<li data-theme="red">
+								<a href="rotpage/index.php?var=css/presets/preset1.css"><div class="red"></div></a>
+							</li>
+							<li data-theme="pink">
+								<a href="rotpage/index.php?var=css/presets/preset2.css"><div class="pink"></div></a>
+							</li>
+							<li data-theme="purple">
+								<a href="rotpage/index.php?var=css/presets/preset3.css"><div class="purple"></div></a>
+							</li>
+							<li data-theme="deep-purple">
+								<a href="rotpage/index.php?var=css/presets/preset4.css"><div class="deep-purple"></div></a>
+							</li>
+							<li data-theme="indigo">
+								<a href="rotpage/index.php?var=css/presets/preset5.css"><div class="indigo"></div></a>
+							</li>
+							<li data-theme="blue">
+								<a href="rotpage/index.php?var=css/presets/preset6.css"><div class="blue"></div></a>
+							</li>
+						</ul>
+						<a href="#" class="cerrar">[X]</a>
+					</div>
+					</section>
+
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Victor Caceres</li><li>Design: <a href="#" class="mostrar">RotPage</a></li>
+						</ul>
+					</footer>
+			</div>
+			
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+			<script>
+			$(document).ready(function(e){
+				$('.mostrar').on('click', function(e){
+					e.preventDefault();
+					$('#flotante').fadeIn();
+				});
+
+				$('.cerrar').on('click', function(e){
+					e.preventDefault();
+					$('#flotante').fadeOut();
+				});
+			});
+		</script>
+	</body>
+</html>
